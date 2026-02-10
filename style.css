@@ -701,6 +701,13 @@ body {
     transform: translateY(-12px);
     box-shadow: var(--shadow-soft);
     border-color: transparent;
+    background: var(--primary);
+    color: white;
+}
+
+.feature-card:hover h3,
+.feature-card:hover p {
+    color: white;
 }
 
 .feature-card.highlighted {
@@ -758,6 +765,15 @@ body {
 .step-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-soft);
+    background: var(--primary);
+    color: white;
+}
+
+.step-card:hover h3,
+.step-card:hover p,
+.step-card:hover .step-number {
+    color: white;
+    -webkit-text-fill-color: white;
 }
 
 .step-number {
