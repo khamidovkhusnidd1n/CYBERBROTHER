@@ -1,98 +1,71 @@
-# 🦅 Cyber Brother ULTRA — Loyiha Hujjatlari (Master Documentation)
-**Versiya:** 1.4.0 (ULTRA)  
+# 🦅 Cyber Brother PRO — Loyiha Hujjatlari (Master Documentation)
+**Versiya:** 1.7.0 (ULTRA-STEALTH)  
 **Status:** Active / Production  
 **Muallif:** Cyber Brother Team (Xamidov Khusniddin)
 
 ---
 
 ## 📖 1. Loyiha Missiyasi va Maqsadi
-**Cyber Brother ULTRA** — bu shunchaki antivirus emas, balki sun'iy intellekt (AI) asosida ishlaydigan **faol kiber-qalqon**.  
-Bizning asosiy farqimiz — **"Zero-Trust"** (Hech kimga ishonmaslik) siyosati.
-
-Biz foydalanuvchini hatto o'zidan ham himoya qilamiz:  
-Agar foydalanuvchi bilmasdan virusli ilovani o'rnatmoqchi bo'lsa, **Cyber Brother bu jarayonni jismonan to'xtatib qoladi.**
+**Cyber Brother PRO** — bu shunchaki antivirus emas, balki sun'iy intellekt (AI) asosida ishlaydigan **faol kiber-qalqon**.  
+Bizning asosiy farqimiz — **"Zero-Trust"** (Hech kimga ishonmaslik) va **"Zero-Server"** (Ma'lumotlarni tashqariga chiqarmaslik) siyosati.
 
 ---
 
-## 🏗️ 2. Tizim Arxitekturasi (Yangilangan)
+## 🏗️ 2. Tizim Arxitekturasi (v1.7.0)
 
 Loyiha 4 ta asosiy "ustun" ustiga qurilgan:
 
-1.  **Mobile App (Android):** Asosiy himoya va bloklash tizimi.
-2.  **Accessibility Core:** Tizimning "ko'zi" va "qo'li" (bosishlarni nazorat qiladi).
-3.  **Telegram Bot:** Litsenziya va tarqatish markazi.
-4.  **Web Admin Panel:** Kuzatuv minorasi.
-
-```mermaid
-graph TD
-    User((Foydalanuvchi))
-    App[📱 Android Ilova]
-    Core[� Accessibility Core]
-    Bot[🤖 Telegram Bot]
-    
-    User -->|Telegramdan APK ochadi| Core
-    Core -->|Bloklaydi (HOME Action)| User
-    
-    User -->|Ilova o'rnatadi| App
-    App -->|Deep DEX Scan (200%)| App
-    App -->|Qizil Ekran (Red Alert)| User
-```
+1.  **Mobile App (Android):** Asosiy himoya va kriptografik identity markazi.
+2.  **Accessibility Security Core:** Tizimning "ko'zi" — fishing saytlar va sideloadingni bloklaydi.
+3.  **Telegram Bot:** Kriptografik litsenziyalarni tekshirish va aktivlashtirish markazi.
+4.  **Web & SEO Engine:** Loyihani dunyoga tanitish va onlayn statistika bazasi.
 
 ---
 
-## 🛠️ 3. Yangi "ULTRA" Funksiyalar (v1.4.0)
+## 🛠️ 3. Yangi "PRO v1.7.0" Funksiyalari
 
-### A. � Anti-Sideloading Shield (Telegram Bloklash)
-Bu funksiya telefonni "yopiq tizim"ga aylantiradi (iPhone kabi).
-*   **Muammo:** Foydalanuvchilar Telegram, Shareit yoki Fayl menejeri orqali virusli APKlarni bilmasdan o'rnatib qo'yadi.
-*   **Yechim:** Cyber Brother **Package Installer** (O'rnatuvchi) oynasi ochilganini sezadi.
-*   **Reaksiya:**
-    1.  Oyna ochilishi bilan **0.1 soniyada** "HOME" (Uyga) tugmasini bosadi.
-    2.  O'rnatish oynasi shartta yopilib ketadi.
-    3.  Foydalanuvchiga: *"⛔ O'rnatish Bloklandi! Faqat Play Marketdan ruxsat bor"* degan xabar chiqadi.
-*   **Qamrov:** Google, Samsung, Xiaomi (MIUI), Huawei, Oppo o'rnatuvchilarini taniydi.
+### A. 🔐 Stealth Identity Protocol V2
+Bu tizim ilovaning "yuragi" bo'lib, xavfsizlikni yangi bosqichga ko'tardi.
+*   **Muammo:** Eski slot tizimini chetlab o'tish yoki soxta ID yasash xavfi bor edi.
+*   **Yechim:** Mutlaqo yangi Kriptografik Checksum tizimi.
+*   **Texnologiya:** ID ichiga yashirin matematik imzo joylashtirilgan. Bot ID-ni ko'rgan zahoti uning bizning algoritm tomonidan yasalganini "Stealth" (maxfiy) rejimda tekshiradi.
+*   **Natija:** Xavfsizlik 1000 barobar oshdi, tizim cheksiz foydalanuvchini qabul qila oladi.
 
-### B. � AI Deep Scan (200% DEX Analysis)
-Oldingi versiyalar faqat fayl nomini ko'rardi. Yangi avlod esa fayl ichiga kiradi.
-*   **Texnologiya:** Ilova o'rnatilishidan oldin uning **`classes.dex`** (boshqaruv kodi) faylini o'qiydi (2MB gacha).
-*   **Nimani qidiradi?**
-    *   `SmsManager` (Yashirin SMS yuborish).
-    *   `Camera` (Yashirin rasmga olish).
-    *   `LocationManager` (GPS kuzatuv).
-    *   `DexClassLoader` (Dinamik kod yuklash - viruslarning asosiy belgisi).
-*   **Natija:** Agar bu kodlar topilsa, ilova o'rnatilishi **bloklanadi**.
+### B. 🧙‍♂️ Security Wizard (Yordamchi)
+Yangi va texnologiyadan uzoq bo'lgan foydalanuvchilar (masalan, keksalar) uchun mo'ljallangan. 
+*   **Xususiyat:** Ilovani birinchi marta o'rnatganda barcha murakkab ruxsatlarni (Accessibility, Notifications) 3 ta oddiy qadamda berishni o'rgatadi.
 
-### C. � Red Alert Protocol (Qizil Ekran)
-Bildirishnomalarni (Notification) foydalanuvchilar ko'pincha o'tkazib yuboradi. Shuning uchun biz radikal choraga o'tdik.
-*   **Ishlash tamoyili:** Xavfli ilova o'rnatilishi bilan **Full-Screen Intent** ishga tushadi.
-*   **Ko'rinish:** Ekran qop-qora yoki qizil bo'lib, o'rtada katta **"XAVFLI ILOVA"** yozuvi va **"O'CHIRISH"** tugmasi chiqadi.
-*   **Majburiylik:** Bu oynani yopish qiyin, foydalanuvchi "O'chirish"ni bosishga majbur bo'ladi.
+### C. 🎯 Phishing Whitelist (Oq Ro'yxat)
+*   **Yechim:** Agar foydalanuvchi biror saytga (masalan, bank saytiga) ishonch bildirishga majbur bo'lsa, u endi uni "Oq ro'yxat"ga qo'shishi mumkin. Bu sayt endi bloklanmaydi, lekin doimiy nazoratda bo'ladi.
+
+### D. 🧠 AI Deep Scan (DEX Analysis)
+*   **Texnologiya:** APK faylning ichki `classes.dex` kodini o'qiydi va shubhali ruxsatlar kombinatsiyasini (Sms + Location + Camera) topsa, o'rnatishni jismonan to'xtatadi.
 
 ---
 
 ## 🔒 4. Xavfsizlik Protokollari
 
-| Xavf Turi | Bizning Yechim |
-| :--- | :--- |
-| **Sideloading (APK o'rnatish)** | **Package Installer Killing** (Jarayonni o'ldirish) |
-| **Spyware (Josuslik)** | **Heuristic DEX Analysis** (Kod tahlili) |
-| **Phishing (Soxta sayt)** | **Accessibility URL Monitor** (Saytlarni tekshirish) |
-| **Vishing (Tel. firibgarlik)** | **Call Text Analysis** (Gaplarni tahlil qilish) |
+| Xavf Turi | Bizning Yechim | Tehnologiya |
+| :--- | :--- | :--- |
+| **Sideloading** | **Package Guard** | Home-Button-Kill (Instant) |
+| **Spyware** | **DEX Analysis** | Static Heuristic AI |
+| **Phishing** | **URL Monitor** | Accessibility Service Guard |
+| **Vishing** | **Voice Detector** | Call Text Keyword Scan |
 
 ---
 
 ## 💰 5. Monetizatsiya (Freemium)
 
 1.  **CORE (Bepul):**
-    *   Virus skaneri.
-    *   App Audit.
-2.  **ULTRA (Premium - 50,000 so'm/oy):**
-    *   **Anti-Sideloading** (Telegram bloklash).
-    *   **Deep DEX Scan.**
-    *   **Red Alert.**
-    *   24/7 AI Monitoring.
+    *   Offline Virus Scanner.
+    *   App Permissions Audit.
+2.  **ULTRA PRO (25,000 so'm / Umrbod):**
+    *   **Stealth ID V2** Aktivatsiyasi.
+    *   **Anti-Sideloading** (Telegram/SharedIt Bloklash).
+    *   **Call Protection** (Vishing).
+    *   **Wizard & Whitelist** rejimlari.
 
 ---
 
-*Hujjat yangilandi: 2026-yil 9-fevral*  
-**Cyber Brother Security Team**
+*Hujjat yangilandi: 2026-yil 10-fevral*  
+**Cyber Brother Security Team | Khusniddin Xamidov**
