@@ -265,7 +265,7 @@ APK_FILES = {
 # --- KEYBOARDS ---
 def get_main_keyboard(is_admin=False):
     keyboard = [
-        [KeyboardButton("🛒 Premium Olish"), KeyboardButton("📥 APK Yuklab Olish")],
+        [KeyboardButton("🛒 Premium Olish"), KeyboardButton("🚀 Tez kunda")],
         [KeyboardButton("🔑 Litsenziyani Aktivlashtirish"), KeyboardButton("ℹ️ Ilova haqida")],
         [KeyboardButton("✍️ Fikr qoldirish"), KeyboardButton("🌐 Vebsayt")]
     ]
@@ -437,13 +437,13 @@ async def handle_text_menu(update: Update, context: ContextTypes.DEFAULT_TYPE) -
             reply_markup=get_main_keyboard(is_admin)
         )
 
-    elif text == "📥 APK Yuklab Olish":
-        version_text = "📱 *Versiyani tanlang:* (Noma'lum manbalarga ruxsat bering)"
-        keyboard = [
-            [InlineKeyboardButton(APK_FILES['v1.7.0']['label'], callback_data='download_v1.7.0')],
-            [InlineKeyboardButton(APK_FILES['v1.3.0']['label'], callback_data='download_v1.3.0')]
-        ]
-        await update.message.reply_text(version_text, parse_mode='Markdown', reply_markup=InlineKeyboardMarkup(keyboard))
+    elif text == "📥 APK Yuklab Olish" or text == "🚀 Tez kunda":
+        await update.message.reply_text(
+            "🚀 *Cyber Brother PRO v1.7.0 tez kunda!*\n\n"
+            "Hozirda ilova yakuniy sinovdan o'tmoqda. Tayyor bo'lishi bilan rasmiy kanalimizda e'lon qilamiz.\n\n"
+            "Kuting, juda oz qoldi! 🦅",
+            parse_mode='Markdown'
+        )
         
     elif text == "✍️ Fikr qoldirish":
         context.user_data['state'] = 'waiting_feedback'
