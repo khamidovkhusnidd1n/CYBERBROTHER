@@ -423,7 +423,7 @@ async function saveTrackingData(data) {
 document.querySelectorAll('.bot-download-link').forEach(link => {
     link.addEventListener('click', async (e) => {
         // We still want tracking, but let's be more reliable with redirection
-        trackDownload('v1.3.0');
+        trackDownload('v1.7.9');
 
         // If the API is slow, we don't want the user to wait for a blank page
         // Let's just let the default 'a' tag behavior happen if target is set, 

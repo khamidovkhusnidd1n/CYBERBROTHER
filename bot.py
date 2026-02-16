@@ -45,10 +45,10 @@ VERIFIED_DEVICES_FILE = 'verified_devices.json'
 # --- DATA LOADING HELPERS ---
 def load_config():
     default_config = {
-        'v1.7.0': {
+        'v1.7.9': {
             'file_id': None, 
-            'path': 'CyberBrother_PRO_v1.7.0.apk', 
-            'name': 'CyberBrother_PRO_v1.7.0.apk'
+            'path': 'CyberBrother_PRO_v1.7.9.apk', 
+            'name': 'CyberBrother_PRO_v1.7.9.apk'
         },
         'v1.3.0': {
             'file_id': None, 
