@@ -485,12 +485,23 @@ async def handle_text_menu(update: Update, context: ContextTypes.DEFAULT_TYPE) -
             "1️⃣ *100% Offline Maxfiylik:* Server yo'q. Bizda sizning ma'lumotlaringizni ko'rish imkoni yo'q.\n"
             "2️⃣ *Mahalliy AI:* O'zbek tilida so'zlashuvchi va mahalliy muammolarni tushunuvchi yagona kiber-aql.\n"
             "3️⃣ *Resurs Tejamkorligi:* Telefoningizni qizdirmaydi va quvvatini yemaydi.\n\n"
+            "📞 *Aloqa:* +998 87 087 16 04\n"
+            "📧 *Email:* cyberbrother@umail.uz\n"
+            "🌐 *Instagram:* [cyberbrotheruz](https://www.instagram.com/cyberbrotheruz)\n"
+            "✈️ *Telegram:* [cyberbrotheruz](https://t.me/cyberbrotheruz)\n\n"
             "🦅 *Bizning shior:* Sizning xavfsizligingiz — bizning obro'yimiz!"
         )
-        await update.message.reply_text(about_text, parse_mode='Markdown')
+        await update.message.reply_text(about_text, parse_mode='Markdown', disable_web_page_preview=True)
         
     elif text == "🌐 Vebsayt":
-        await update.message.reply_text("🔗 [https://khamidovkhusnidd1n.github.io/CYBERBROTHER/](https://khamidovkhusnidd1n.github.io/CYBERBROTHER/)")
+        site_text = (
+            "🌐 *Cyber Brother Rasmiy Vebsayti:*\n"
+            "🔗 [https://cyberbrother.uz](https://cyberbrother.uz)\n\n"
+            "📢 *Bizni ijtimoiy tarmoqlarda kuzating:*\n"
+            "🔹 Telegram: [cyberbrotheruz](https://t.me/cyberbrotheruz)\n"
+            "🔹 Instagram: [cyberbrotheruz](https://www.instagram.com/cyberbrotheruz)"
+        )
+        await update.message.reply_text(site_text, parse_mode='Markdown', disable_web_page_preview=True)
 
 async def download_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = update.callback_query
